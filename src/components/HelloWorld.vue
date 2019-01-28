@@ -118,7 +118,7 @@
                   <div class="headline">Authorization</div>
                 </v-card-title>
                 <v-card-text>
-                  I am authorized to work in the USA.
+                  I'm authorized to work in the USA.
                 </v-card-text>
               </v-card>
             </v-flex>
