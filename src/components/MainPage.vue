@@ -2,7 +2,7 @@
   <v-app light>
     <v-content>
       <section>
-        <v-parallax :src="require('@/assets/blue.jpg')" height="600">
+        <v-parallax :src="require('@/assets/wallhaven.jpg')" height="600">
           <v-layout
             column
             align-center
@@ -44,7 +44,7 @@
                 <v-flex xs12 md4>
                   <v-card flat class="elevation-0 transparent">
                     <v-card-text class="text-xs-center">
-                      <v-icon x-large class="blue--text text--lighten-2">face</v-icon>
+                      <v-icon x-large class="blue--text text--lighten-2">fas fa-hands-helping</v-icon>
                     </v-card-text>
                     <v-card-title primary-title class="layout justify-center">
                       <div class="headline text-xs-center">Consulting</div>
@@ -59,7 +59,7 @@
                 <v-flex xs12 md4>
                   <v-card flat class="elevation-0 transparent">
                     <v-card-text class="text-xs-center">
-                      <v-icon x-large class="blue--text text--lighten-2">code</v-icon>
+                      <v-icon x-large class="blue--text text--lighten-2">fas fa-code</v-icon>
                     </v-card-text>
                     <v-card-title primary-title class="layout justify-center">
                       <div class="headline">SaaS</div>
@@ -74,7 +74,7 @@
                 <v-flex xs12 md4>
                   <v-card flat class="elevation-0 transparent">
                     <v-card-text class="text-xs-center">
-                      <v-icon x-large class="blue--text text--lighten-2">money</v-icon>
+                      <v-icon x-large class="blue--text text--lighten-2">fab fa-ethereum</v-icon>
                     </v-card-text>
                     <v-card-title primary-title class="layout justify-center">
                       <div class="headline text-xs-center">Crypto</div>
@@ -131,28 +131,30 @@
                   Email is always preferred
                 </v-card-text>
                 <v-list class="transparent">
+                  
                   <v-list-tile>
                     <v-list-tile-action>
-                      <v-icon class="blue--text text--lighten-2">phone</v-icon>
+                      <v-icon class="blue--text text--lighten-2">fas fa-envelope</v-icon>
                     </v-list-tile-action>
                     <v-list-tile-content>
-                      <v-list-tile-title>+1 (813) 591-9982</v-list-tile-title>
+                      <v-list-tile-title><a href="mailto:shouppejosh@gmail.com">shouppejosh@gmail.com</a></v-list-tile-title>
+                    </v-list-tile-content>
+                  </v-list-tile>
+
+                  <v-list-tile>
+                    <v-list-tile-action>
+                      <v-icon class="blue--text text--lighten-2">fab fa-linkedin</v-icon>
+                    </v-list-tile-action>
+                    <v-list-tile-content>
+                      <v-list-tile-title><a href="https://www.linkedin.com/in/joshshouppe/">/in/joshshouppe/</a></v-list-tile-title>
                     </v-list-tile-content>
                   </v-list-tile>
                   <v-list-tile>
                     <v-list-tile-action>
-                      <v-icon class="blue--text text--lighten-2">place</v-icon>
+                      <v-icon class="blue--text text--lighten-2">fab fa-github</v-icon>
                     </v-list-tile-action>
                     <v-list-tile-content>
-                      <v-list-tile-title>Tampa, FL, USA / Remote</v-list-tile-title>
-                    </v-list-tile-content>
-                  </v-list-tile>
-                  <v-list-tile>
-                    <v-list-tile-action>
-                      <v-icon class="blue--text text--lighten-2">email</v-icon>
-                    </v-list-tile-action>
-                    <v-list-tile-content>
-                      <v-list-tile-title>shouppejosh@gmail.com</v-list-tile-title>
+                      <v-list-tile-title><a href="https://github.com/coozin">/coozin</a></v-list-tile-title>
                     </v-list-tile-content>
                   </v-list-tile>
                 </v-list>
