@@ -18,7 +18,7 @@
             </div>
           </v-card-title>
           <v-layout>
-            <v-flex xs9>
+            <v-flex xs12 md9>
               <v-card-text>
                 <div>
                   <h3 class="blue--text">Experience</h3>
@@ -74,7 +74,7 @@
                 </div>
               </v-card-text>
             </v-flex>
-            <v-flex xs3>
+            <v-flex xs12 md3 class="hidden-sm-and-down">
               <v-card-text>
                 <div>
                   <h3 class="blue--text">Skills</h3>
