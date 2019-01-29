@@ -15,9 +15,9 @@
               class="blue lighten-2 mt-5"
               dark
               large
-              href="mailto:shouppejosh@gmail.com"
+              to="/resume"
             >
-              Email now
+              View full resume
             </v-btn>
           </v-layout>
         </v-parallax>
@@ -52,7 +52,7 @@
                     <v-card-text>
                       Two years experience in consulting with Accenture Italia! Worked on many namebrand projects 
                       such as KitKat, Jeep, Fiat, Unicredit and even a ticketing terminal used by thousands everyday: 
-                      ItaloTreno. (JavaScript, jQuery, TypeScript, REST APIs, Git)
+                      <a href="https://www.italotreno.it/en/the-train/italo-ticket-office">ItaloTreno</a>. (JavaScript, jQuery, TypeScript, REST APIs, Git)
                     </v-card-text>
                   </v-card>
                 </v-flex>
@@ -81,7 +81,7 @@
                     </v-card-title>
                     <v-card-text>
                       After moving back to the US, I worked remotely for Halo Platform building 
-                      cryptocurrency exchanges. Their decentralized exchange uses modular Vue.js ui components and is styled by 
+                      cryptocurrency exchanges. Their <a href="https://www.halodex.io/">decentralized exchange</a> uses modular Vue.js ui components and is styled by 
                       vuetify (like this site). (Vue.js, Vuex, Apollo GraphQL, WebSockets)
                     </v-card-text>
                   </v-card>
@@ -167,7 +167,7 @@
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'MainPage',
   props: {
     msg: String
   }

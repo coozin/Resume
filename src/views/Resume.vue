@@ -2,7 +2,15 @@
   <v-app>
     <v-layout class="padding">
       <v-flex xs12 sm8 offset-sm2>
-        <v-card flat>
+        <v-btn
+          class="blue lighten-2"
+          dark
+          large
+          to="/"
+        >
+          Home
+        </v-btn>
+        <v-card flat class="card-padding">
           <v-card-title primary-title>
             <div>
               <h1 class="headline mb-0">Josh Shouppe</h1>
@@ -75,7 +83,7 @@
               <v-card-text>
                 <div>
                   <blockquote>JavaScript, Vue.js, vuex, react.js, redux, node.js, 
-                    REST API’s, websockets, charting / TradingView, 
+                    REST API’s, websockets, charting, TradingView, 
                     HTML5, CSS/SASS/LESS, Bootstrap, Vuetify, Material Design</blockquote>
                 </div>
               </v-card-text>
@@ -86,7 +94,18 @@
               </v-card-text>
               <v-card-text>
                 <div>
-                  <blockquote>Linux, MacOS, Windows</blockquote>
+                  <blockquote>Linux (many distros), MacOS, Windows</blockquote>
+                </div>
+              </v-card-text>
+              <v-card-text>
+                <div>
+                  <h3 class="blue--text">Languages</h3>
+                </div>
+              </v-card-text>
+              <v-card-text>
+                <div>
+                  <blockquote>Native English</blockquote>
+                  <blockquote>C1 Italian</blockquote>
                 </div>
               </v-card-text>
             </v-flex>
@@ -106,5 +125,8 @@ export default {
 <style scoped>
 .padding {
   padding-top: 40px;
+}
+.card-padding {
+  padding: 20px;
 }
 </style>
