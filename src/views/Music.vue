@@ -1,14 +1,12 @@
 <template>
-  <div>
-    <v-layout>
-      <div v-if="info && info.tracks">
-        <div v-for="item in info.tracks" :key="item._id">
-          <TrackCard :track="item"/>
-        </div>
+  <v-app>
+    <v-container v-if="info && info.tracks">
+      <div v-for="(item, index) in info.tracks" :key="index">
+        <TrackCard :track="item" />
       </div>
-    </v-layout>
+    </v-container>
     {{errors}}
-  </div>
+  </v-app>
 </template>
 
 <script>
@@ -40,7 +38,6 @@ export default {
       })
       .then(response => {
         this.info = response.data
-        console.log(response.data)
       })
       .catch((e) => {
         this.errors = e
