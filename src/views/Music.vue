@@ -1,5 +1,6 @@
 <template>
   <v-app>
+    <SearchMusic />
     <v-container v-if="info && info.tracks">
       <div v-for="(item, index) in info.tracks" :key="index">
         <TrackCard :track="item" />
@@ -10,9 +11,14 @@
 </template>
 
 <script>
-
+import { mapState } from 'vuex'
 import axios from 'axios';
 import TrackCard from '@/components/TrackCard.vue';
+import SearchMusic from '@/components/SearchMusic.vue';
+
+const HTTP = axios.create({
+  baseURL: `https://openwhyd.org/hot/`
+});
 
 export default {
   name: 'music',
@@ -22,16 +28,34 @@ export default {
       errors: null,
     }
   },
-  components: {
-    TrackCard
+  computed: {
+    ...mapState([
+      'genre'
+    ])
   },
-  mounted () {
-    const HTTP = axios.create({
-      baseURL: `https://openwhyd.org/hot/`,
-    })
-
+  watch: {
+    genre: function() {
+      HTTP
+        .get(this.genre, {
+          params: {
+            format: 'json'
+          },
+        })
+        .then(response => {
+          this.info = response.data
+        })
+        .catch((e) => {
+          this.errors = e
+        })
+    },
+  },
+  components: {
+    TrackCard,
+    SearchMusic
+  },
+  created () {
     HTTP
-      .get('folk', {
+      .get(this.genre, {
         params: {
           format: 'json'
         },
