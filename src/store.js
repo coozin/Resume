@@ -9,7 +9,6 @@ export default new Vuex.Store({
   },
   mutations: {
     SEARCH_GENRE: (state, genre) => {
-      console.log('SEARCH_GENRE genre', genre)
       state.genre = genre
     }
   },
