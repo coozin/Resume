@@ -1,25 +1,26 @@
 <template>
-  <v-container>
-    <v-layout>
-      <v-flex xs10>
-        <v-text-field
-          class="mx-3"
-          flat
-          label="Search"
-          prepend-inner-icon="search"
-          solo-inverted
-          v-model="searchInput"
-        ></v-text-field>
-      </v-flex>
-      <v-flex>
-        <v-btn
-          @click="() => this.searchGenre()"
-        >
-          Go
-        </v-btn>
-      </v-flex>
-    </v-layout>
-  </v-container>
+  <v-layout>
+    <v-flex xs10>
+      <v-text-field
+        class="mt-1 ml-2"
+        flat
+        label="Search"
+        prepend-inner-icon="search"
+        solo-inverted
+        v-model="searchInput"
+      ></v-text-field>
+    </v-flex>
+    <v-flex>
+      <v-btn
+        @click="() => this.searchGenre()"
+        class="blue lighten-2"
+        dark
+        large
+      >
+        Go
+      </v-btn>
+    </v-flex>
+  </v-layout>
 </template>
 
 <script>

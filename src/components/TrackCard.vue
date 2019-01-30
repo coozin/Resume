@@ -6,7 +6,7 @@
           :src="track['img']"
         ></v-img>
       </v-flex>
-      <v-flex xs8>
+      <v-flex xs7 offset-xs1>
         <v-card-title primary-title>
           <div>
             <h3 class="headline mb-0">{{track['uNm']}}</h3>
@@ -15,17 +15,18 @@
         </v-card-title>
         <v-card-actions>
           <v-btn
-            class="blue lighten-2 mt-5"
+            class="blue lighten-2"
             dark
             large
-            :href="songLink"
+            @click="() => open()"
           >
             Play
             <v-icon
               v-if="songSource"
               right
             >
-              {{songSource === "yt" ? `fab fa-youtube` : `fab fa-soundcloud` }}
+              {{songSource === "yt" ? `fab fa-youtube` :
+                songSource === "sc" ? 'fab fa-soundcloud' :  'fab fa-vimeo-v'}}
             </v-icon>
           </v-btn>
         </v-card-actions>
@@ -56,6 +57,9 @@ export default {
         }
       }
     },
+    open () {
+      window.open(this.songLink, '_blank')
+    }
   }
 }
 </script>

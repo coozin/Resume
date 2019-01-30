@@ -1,9 +1,19 @@
 <template>
   <v-app>
-    <SearchMusic />
-    <v-container v-if="info && info.tracks">
-      <div v-for="(item, index) in info.tracks" :key="index">
-        <TrackCard :track="item" />
+    <v-container>
+      <v-layout justify-center>
+        <h1 class="display-1 mb-0">Search for what's hot</h1>
+      </v-layout>
+      <v-layout justify-center>
+        <div class="subheader grey--text mb-5">with 
+          <a href="https://www.openwhyd.org">openwhyd's</a> api
+        </div>
+      </v-layout>
+      <SearchMusic />
+      <div v-if="info && info.tracks">
+        <div v-for="(item, index) in info.tracks" :key="index">
+          <TrackCard :track="item" />
+        </div>
       </div>
     </v-container>
     {{errors}}
@@ -38,7 +48,8 @@ export default {
       HTTP
         .get(this.genre, {
           params: {
-            format: 'json'
+            format: 'json',
+            limit: 100,
           },
         })
         .then(response => {
@@ -57,7 +68,8 @@ export default {
     HTTP
       .get(this.genre, {
         params: {
-          format: 'json'
+          format: 'json',
+          limit: 100,
         },
       })
       .then(response => {
