@@ -9,6 +9,7 @@
           <a href="https://www.openwhyd.org">openwhyd's</a> api
         </div>
       </v-layout>
+      <SearchBy />
       <SearchMusic />
       <div v-if="info && info.tracks">
         <div v-for="(item, index) in info.tracks" :key="index">
@@ -21,13 +22,17 @@
 </template>
 
 <script>
+// libraries
 import { mapState } from 'vuex'
 import axios from 'axios';
+
+// components
 import TrackCard from '@/components/TrackCard.vue';
 import SearchMusic from '@/components/SearchMusic.vue';
+import SearchBy from '@/components/SearchBy.vue';
 
 const HTTP = axios.create({
-  baseURL: `https://openwhyd.org/hot/`
+  baseURL: `https://openwhyd.org/`
 });
 
 export default {
@@ -38,15 +43,56 @@ export default {
       errors: null,
     }
   },
+  components: {
+    TrackCard,
+    SearchMusic,
+    SearchBy
+  },
   computed: {
     ...mapState([
-      'genre'
+      'genre',
+      'searchType'
     ])
   },
   watch: {
     genre: function() {
+      this.search(this.searchType)
+    },
+    searchType: function() {
+      console.log(this.searchType)
+    }
+  },
+  created () {
+    this.search(this.searchType)
+  },
+  methods: {
+    search (searchTypeLocal) {
+      let route = 'hot/'
+      console.log(searchTypeLocal)
+
+      if (searchTypeLocal === "genre") {
+        route = `hot/${this.genre}`
+      } else if (searchTypeLocal === "artist") {
+        route = `search?q=${this.genre}`
+
+        HTTP
+        .get(route, {
+          params: {
+            format: 'json',
+            limit: 100,
+          },
+        })
+        .then(response => {
+          this.info = response.data.results
+        })
+        .catch((e) => {
+          this.errors = e
+        })
+
+        return
+      }
       HTTP
-        .get(this.genre, {
+        .get(route, {
           params: {
             format: 'json',
             limit: 100,
@@ -58,26 +104,7 @@ export default {
         .catch((e) => {
           this.errors = e
         })
-    },
-  },
-  components: {
-    TrackCard,
-    SearchMusic
-  },
-  created () {
-    HTTP
-      .get(this.genre, {
-        params: {
-          format: 'json',
-          limit: 100,
-        },
-      })
-      .then(response => {
-        this.info = response.data
-      })
-      .catch((e) => {
-        this.errors = e
-      })
+    }
   }
 }
 </script>
