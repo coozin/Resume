@@ -41,6 +41,11 @@ export default {
   props: {
     track: Object,
   },
+  watch: {
+    track: function () {
+      this.checkTrackEid(this.track['eId']);
+    }
+  },
   created () {
     this.checkTrackEid(this.track['eId']);
   },

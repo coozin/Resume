@@ -62,7 +62,7 @@ export default {
       console.log(this.searchType)
     }
   },
-  created () {
+  mounted () {
     this.search(this.searchType)
   },
   methods: {
