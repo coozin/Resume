@@ -4,7 +4,7 @@
       <v-text-field
         class="mt-1 ml-2"
         flat
-        label="Search"
+        label="Search for a song, artist or genre"
         prepend-inner-icon="search"
         solo-inverted
         v-model="searchInput"

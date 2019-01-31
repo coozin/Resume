@@ -52,7 +52,11 @@ export default {
   },
   watch: {
     genre: function() {
-      this.search()
+      if (this.genre === ''){
+        this.search(true)
+      } else {
+        this.search()
+      }
     },
   },
   created () {
