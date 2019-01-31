@@ -9,7 +9,6 @@
           <a href="https://www.openwhyd.org">openwhyd's</a> api
         </div>
       </v-layout>
-      <SearchBy />
       <SearchMusic />
       <div v-if="info && info.tracks">
         <div v-for="(item, index) in info.tracks" :key="index">
@@ -29,10 +28,9 @@ import axios from 'axios';
 // components
 import TrackCard from '@/components/TrackCard.vue';
 import SearchMusic from '@/components/SearchMusic.vue';
-import SearchBy from '@/components/SearchBy.vue';
 
 const HTTP = axios.create({
-  baseURL: `https://openwhyd.org/`
+  baseURL: `https://cors-anywhere.herokuapp.com/https://openwhyd.org/`,
 });
 
 export default {
@@ -45,65 +43,43 @@ export default {
   },
   components: {
     TrackCard,
-    SearchMusic,
-    SearchBy
+    SearchMusic
   },
   computed: {
     ...mapState([
       'genre',
-      'searchType'
     ])
   },
   watch: {
     genre: function() {
-      this.search(this.searchType)
+      this.search()
     },
-    searchType: function() {
-      console.log(this.searchType)
-    }
   },
-  mounted () {
-    this.search(this.searchType)
+  created () {
+    this.search(true)
   },
   methods: {
-    search (searchTypeLocal) {
-      let route = 'hot/'
-      console.log(searchTypeLocal)
+    search (isAll) {
+      let route = `search?q=${this.genre}`
 
-      if (searchTypeLocal === "genre") {
-        route = `hot/${this.genre}`
-      } else if (searchTypeLocal === "artist") {
-        route = `search?q=${this.genre}`
-
-        HTTP
-        .get(route, {
-          params: {
-            format: 'json',
-            limit: 100,
-          },
-        })
-        .then(response => {
-          this.info = response.data.results
-        })
-        .catch((e) => {
-          this.errors = e
-        })
-
-        return
+      if (isAll) {
+        route = `hot/`
       }
+
       HTTP
         .get(route, {
           params: {
             format: 'json',
-            limit: 100,
+            limit: 20,
           },
         })
         .then(response => {
-          this.info = response.data
+          this.info = isAll ? response.data : response.data.results
         })
         .catch((e) => {
           this.errors = e
         })
+
     }
   }
 }

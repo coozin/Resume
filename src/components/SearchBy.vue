@@ -38,7 +38,7 @@ export default {
       'SEARCH_BY'
     ]),
     searchBy: function(toggle) {
-      console.log('on click', this.options[toggle])
+      // console.log('on click', this.options[toggle])
       this.SEARCH_BY(this.options[toggle])
     }
   }

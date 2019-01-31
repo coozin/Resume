@@ -1,12 +1,10 @@
 <template>
   <v-card flat class="mb-2 mt-2 ml-2 mr-2">
-    <v-layout>
-      <v-flex xs4 align-self-center>
-        <v-img
-          :src="track['img']"
-        ></v-img>
+    <v-layout row wrap justify-center>
+      <v-flex md6 xs12>
+        <iframe :src='songLink' frameborder='0'></iframe>
       </v-flex>
-      <v-flex xs7 offset-xs1>
+      <v-flex md6 xs12>
         <v-card-title primary-title>
           <div>
             <h3 class="headline mb-0">{{track['uNm']}}</h3>
@@ -20,7 +18,7 @@
             large
             @click="() => open()"
           >
-            Play
+            Open in new window
             <v-icon
               v-if="songSource"
               right
@@ -55,13 +53,15 @@ export default {
       if (arr[1]) {
         if (arr[1] === "yt"){
           this.songSource = "yt"
-          this.songLink = `https://www.youtube.com/watch?v=${arr[2]}`
+          // this.songLink = `https://www.youtube.com/watch?v=${arr[2]}`
+          this.songLink = `https://www.youtube.com/embed/${arr[2]}`
         } else if (arr[1] === "sc") {
           this.songSource = "sc"
           this.songLink = `https://soundcloud.com/${arr[2]}`
         } else if (arr[1] === "vi") {
           this.songSource = "vi"
-          this.songLink = `https://vimeo.com/${arr[2]}`
+          // this.songLink = `https://vimeo.com/${arr[2]}`
+          this.songLink = `https://player.vimeo.com/video/${arr[2]}`
         }
       }
     },
