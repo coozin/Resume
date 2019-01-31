@@ -26,7 +26,7 @@
               right
             >
               {{songSource === "yt" ? `fab fa-youtube` :
-                songSource === "sc" ? 'fab fa-soundcloud' :  'fab fa-vimeo-v'}}
+                songSource === "sc" ? 'fab fa-soundcloud' : 'fab fa-vimeo-v'}}
             </v-icon>
           </v-btn>
         </v-card-actions>
@@ -59,6 +59,9 @@ export default {
         } else if (arr[1] === "sc") {
           this.songSource = "sc"
           this.songLink = `https://soundcloud.com/${arr[2]}`
+        } else if (arr[1] === "vi") {
+          this.songSource = "vi"
+          this.songLink = `https://vimeo.com/${arr[2]}`
         }
       }
     },
