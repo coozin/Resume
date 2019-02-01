@@ -10,7 +10,7 @@
         v-model="searchInput"
       ></v-text-field>
       <v-btn
-        @click="() => this.searchGenre()"
+        @click="() => this.searchMusic()"
         class="blue lighten-2"
         dark
         large
@@ -33,10 +33,10 @@ export default {
   },
   methods: {
     ...mapMutations([
-      'SEARCH_GENRE'
+      'SEARCH_MUSIC'
     ]),
-    searchGenre: function() {
-      this.SEARCH_GENRE(this.searchInput)
+    searchMusic: function() {
+      this.SEARCH_MUSIC(this.searchInput)
       this.searchInput = ''
     }
   }

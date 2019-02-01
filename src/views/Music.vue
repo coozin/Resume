@@ -55,12 +55,12 @@ export default {
   },
   computed: {
     ...mapState([
-      'genre',
+      'searchEntry',
     ])
   },
   watch: {
-    genre: function() {
-      if (this.genre === ''){
+    searchEntry: function() {
+      if (this.searchEntry === ''){
         this.search(true)
       } else {
         this.search()
@@ -72,7 +72,7 @@ export default {
   },
   methods: {
     search (isAll) {
-      let route = `search?q=${this.genre}`
+      let route = `search?q=${this.searchEntry}`
 
       if (isAll) {
         route = `hot/`
