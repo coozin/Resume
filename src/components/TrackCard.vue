@@ -51,14 +51,10 @@ export default {
       if (this.track && this.track !== null && this.track['eId']){
         this.checkTrackEid(this.track['eId']);
       }
-      
-
-      console.log("TRACK (watch)", this.track)
     }
   },
   created () {
     this.checkTrackEid(this.track['eId']);
-    console.log("TRACK (created)", this.track)
   },
   methods: {
     checkTrackEid (eId) {
@@ -69,7 +65,6 @@ export default {
       let arr = eId.split('/', 3)
       let arrScPlay = eId.split('/playlists/', 2)
       let arrScTrack = eId.split('/tracks/', 2)
-
 
       if (arr[1]) {
         if (arr[1] === "yt"){
@@ -87,10 +82,15 @@ export default {
             soundCloudLink = `playlists/${arrScPlay[1]}`
           } else if (arrScTrack.length === 2) {
             // is track
-            soundCloudLink = `tracks/${arrScTrack[1]}`
-          }
+            let trackId = arrScTrack[1]
+            let trackSplit = trackId.split('/', 2)
 
-          console.log('soundCloudLink', soundCloudLink)
+            if (trackSplit.length === 2) {
+              soundCloudLink = `tracks/${trackSplit[0]}`
+            } else {
+              soundCloudLink = `tracks/${trackId}`
+            }
+          }
           
           let removeSecretTokenArr = soundCloudLink.split('?', 2)
 
@@ -99,6 +99,7 @@ export default {
           } else {
             this.songLink = `${linkBase}${soundCloudLink}`
           }
+          
         } else if (arr[1] === "vi") {
           this.songSource = "vi"
           this.songLink = `https://player.vimeo.com/video/${arr[2]}`

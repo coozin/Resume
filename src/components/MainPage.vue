@@ -112,6 +112,27 @@
       <section>
         <v-container grid-list-xl>
           <v-layout row wrap justify-center class="my-5">
+
+            <v-flex xs12 sm4>
+              <v-card flat class="elevation-0 transparent">
+                <v-card-title primary-title class="layout justify-center">
+                  <div class="headline">Recent project</div>
+                </v-card-title>
+                <v-card-actions
+                  class="justify-center"
+                >
+                  <v-btn
+                    class="blue lighten-2 mt-5"
+                    dark
+                    large
+                    to="/music"
+                  >
+                    Free Music
+                  </v-btn>
+                </v-card-actions>
+              </v-card>
+            </v-flex>
+
             <v-flex xs12 sm4>
               <v-card flat class="elevation-0 transparent">
                 <v-card-title primary-title class="layout justify-center">
@@ -122,7 +143,8 @@
                 </v-card-text>
               </v-card>
             </v-flex>
-            <v-flex xs12 sm4 offset-sm1>
+
+            <v-flex xs12 sm4>
               <v-card flat class="elevation-0 transparent">
                 <v-card-title primary-title class="layout justify-center">
                   <div class="headline">Contact me</div>
@@ -149,6 +171,7 @@
                       <v-list-tile-title><a href="https://www.linkedin.com/in/joshshouppe/">/in/joshshouppe/</a></v-list-tile-title>
                     </v-list-tile-content>
                   </v-list-tile>
+
                   <v-list-tile>
                     <v-list-tile-action>
                       <v-icon class="blue--text text--lighten-2">fab fa-github</v-icon>

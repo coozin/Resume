@@ -1,6 +1,6 @@
 <template>
   <v-layout>
-    <v-flex xs10>
+    <v-toolbar flat color="transparent">
       <v-text-field
         class="mt-1 ml-2"
         flat
@@ -9,8 +9,6 @@
         solo-inverted
         v-model="searchInput"
       ></v-text-field>
-    </v-flex>
-    <v-flex>
       <v-btn
         @click="() => this.searchGenre()"
         class="blue lighten-2"
@@ -19,7 +17,7 @@
       >
         Go
       </v-btn>
-    </v-flex>
+    </v-toolbar>
   </v-layout>
 </template>
 

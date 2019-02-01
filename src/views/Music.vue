@@ -1,8 +1,16 @@
 <template>
   <v-app>
     <v-container>
+      <v-btn
+        class="blue lighten-2"
+        dark
+        large
+        to="/"
+      >
+        Home
+      </v-btn>
       <v-layout justify-center>
-        <h1 class="display-1 mb-0">Search for what's hot</h1>
+        <h1 class="display-1 mb-0">Listen for free</h1>
       </v-layout>
       <v-layout justify-center>
         <div class="subheader grey--text mb-5">with 
@@ -83,7 +91,6 @@ export default {
         .catch((e) => {
           this.errors = e
         })
-
     }
   }
 }
