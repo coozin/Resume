@@ -3,7 +3,7 @@
     <v-layout row wrap>
       <v-flex md6 xs12>
         <div class="my-center">
-          <iframe :src='songLink' frameborder='0'></iframe>
+          <iframe :src='embeddedLink' frameborder='0'></iframe>
         </div>
       </v-flex>
       <v-flex md6 xs12>
@@ -43,6 +43,8 @@ export default {
   },
   data () {
     return {
+      songSource: '',
+      embeddedLink: '',
       outLink: ''
     }
   },
@@ -62,53 +64,66 @@ export default {
         return 
       }
 
+      // determine song source
       let arr = eId.split('/', 3)
-      let arrScPlay = eId.split('/playlists/', 2)
-      let arrScTrack = eId.split('/tracks/', 2)
-
+      
       if (arr[1]) {
         if (arr[1] === "yt"){
           this.songSource = "yt"
-          this.songLink = `https://www.youtube.com/embed/${arr[2]}`
+          this.embeddedLink = `https://www.youtube.com/embed/${arr[2]}`
           this.outLink = `https://www.youtube.com/watch?v=${arr[2]}`
         } else if (arr[1] === "sc") {
           this.songSource = "sc"
-          const linkBase = 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/'
           this.outLink = `https://soundcloud.com/${arr[2]}`
-          let soundCloudLink = arr[2]
 
-          if (arrScPlay.length === 2) {
-            // is playlist
-            soundCloudLink = `playlists/${arrScPlay[1]}`
-          } else if (arrScTrack.length === 2) {
-            // is track
-            let trackId = arrScTrack[1]
-            let trackSplit = trackId.split('/', 2)
-
-            if (trackSplit.length === 2) {
-              soundCloudLink = `tracks/${trackSplit[0]}`
-            } else {
-              soundCloudLink = `tracks/${trackId}`
-            }
-          }
-          
-          let removeSecretTokenArr = soundCloudLink.split('?', 2)
-
-          if (removeSecretTokenArr.length === 2) {
-            this.songLink = `${linkBase}${removeSecretTokenArr[0]}`
-          } else {
-            this.songLink = `${linkBase}${soundCloudLink}`
-          }
+          this.processScLink(eId, arr)
           
         } else if (arr[1] === "vi") {
           this.songSource = "vi"
-          this.songLink = `https://player.vimeo.com/video/${arr[2]}`
+          this.embeddedLink = `https://player.vimeo.com/video/${arr[2]}`
           this.outLink = `https://vimeo.com/${arr[2]}`
         }
       }
     },
     open () {
       window.open(this.outLink, '_blank')
+    },
+    processScLink(eId, arr) {
+      // is track or playlist?
+      let arrScPlay = eId.split('/playlists/', 2)
+      let arrScTrack = eId.split('/tracks/', 2)
+
+      // embedded link base
+      const embeddedLinkBase = 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/'
+
+      // take what's after "sc" for default
+      let soundCloudLink = arr[2]
+
+      if (arrScPlay.length === 2) {
+        // is playlist
+        soundCloudLink = `playlists/${arrScPlay[1]}`
+      } else if (arrScTrack.length === 2) {
+        // is track
+        let trackId = arrScTrack[1]
+
+        // remove "/stream" (only applies to tracks)
+        let trackSplit = trackId.split('/', 2)
+
+        if (trackSplit.length === 2) {
+          soundCloudLink = `tracks/${trackSplit[0]}`
+        } else {
+          soundCloudLink = `tracks/${trackId}`
+        }
+      }
+      
+      // remove secret token
+      let removeSecretTokenArr = soundCloudLink.split('?', 2)
+
+      if (removeSecretTokenArr.length === 2) {
+        this.embeddedLink = `${embeddedLinkBase}${removeSecretTokenArr[0]}`
+      } else {
+        this.embeddedLink = `${embeddedLinkBase}${soundCloudLink}`
+      }
     }
   }
 }
