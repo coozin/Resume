@@ -26,6 +26,18 @@
               </v-card-text>
               <v-card-text>
                 <div>
+                  <div><b>SOMA Global</b>, Tampa, FL - <i>Senior Frontend Engineer</i></div>
+                  <div class="grey--text">Feb 2019 - Nov 2019</div>
+                  <blockquote>Dispatch software for first responders. Definitely an exciting project to be a part
+                    of. Police, sheriffs, and firefighters use SOMA's software to dispatch units into the field and
+                    respond to emergencies. This was a web-based solution with servers on premise or in the cloud.
+                    But this software did so much more than just that. We used GoLang for API development. Angular 1 
+                    for V1 (still maintained) and react with redux for V2.
+                  </blockquote>
+                </div>
+              </v-card-text>
+              <v-card-text>
+                <div>
                   <div><b>Halo Platform</b>, Remote - <i>Frontend Engineer</i></div>
                   <div class="grey--text">Feb 2018 - Nov 2018</div>
                   <blockquote>Lead frontend development of centralized exchange (vue.js, vuex). 
@@ -82,9 +94,9 @@
               </v-card-text>
               <v-card-text>
                 <div>
-                  <blockquote>JavaScript, Vue.js, vuex, react.js, redux, node.js, 
+                  <blockquote>JavaScript, ES6, Vue.js, vuex, react.js, redux, node.js, 
                     REST API’s, websockets, charting, TradingView, 
-                    HTML5, CSS/SASS/LESS, Bootstrap, Vuetify, Material Design</blockquote>
+                    HTML5, CSS/SASS/LESS, Bootstrap, Vuetify, Material Design, GoLang, Angular 1</blockquote>
                 </div>
               </v-card-text>
               <v-card-text>
@@ -104,8 +116,8 @@
               </v-card-text>
               <v-card-text>
                 <div>
-                  <blockquote>Native English</blockquote>
-                  <blockquote>C1 Italian</blockquote>
+                  <blockquote>Native English,</blockquote>
+                  <blockquote>Conversational & Professional Italian</blockquote>
                 </div>
               </v-card-text>
             </v-flex>

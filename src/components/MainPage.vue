@@ -86,6 +86,21 @@
                     </v-card-text>
                   </v-card>
                 </v-flex>
+                <v-flex xs12 md4>
+                  <v-card flat class="elevation-0 transparent">
+                    <v-card-text class="text-xs-center">
+                      <v-icon x-large class="blue--text text--lighten-2">fas fa-shield-alt</v-icon>
+                    </v-card-text>
+                    <v-card-title primary-title class="layout justify-center">
+                      <div class="headline text-xs-center">Public Service</div>
+                    </v-card-title>
+                    <v-card-text>
+                      After the crypto bubble went bust. I started working locally in Tampa at <a href="https://www.somaglobal.com/">SOMA Global</a> in the public
+                      safety arena. I got back to my roots to once again work with react & redux but with some new skills sprinkled in.
+                      (React, Redux, GoLang, Angular)
+                    </v-card-text>
+                  </v-card>
+                </v-flex>
               </v-layout>
             </v-container>
           </v-flex>
