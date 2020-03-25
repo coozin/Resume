@@ -25,7 +25,7 @@ export default {
     image: Object,
   },
   created () {
-    console.log(this.image)
+    // console.log(this.image)
   }
 }
 </script>

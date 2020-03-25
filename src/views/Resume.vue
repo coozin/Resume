@@ -26,6 +26,20 @@
               </v-card-text>
               <v-card-text>
                 <div>
+                  <div><b>RadicalBit</b>, Milan, Italy - <i>Senior Frontend Engineer</i></div>
+                  <div class="grey--text">Feb 2020 - Present</div>
+                  <blockquote>In the first few months I've already dedicated time to the companies needs such as reducing 
+                    bundle size and cleaning up outdated webpack plugins. As the only dedicated front-end developer in the 
+                    company, I have the unique opportunity to make a big impact on our front-end libraries. Our component 
+                    library contains modular functional components based off the ant-design library with added customization. 
+                    The biggest project I worked on is a built-in code editor using the Monaco library. VS Code is built off 
+                    of Monaco so it's like having VS Code directly in your project! Syntax highlighting, formatting and a lot 
+                    of the functionality of a full development environment.
+                  </blockquote>
+                </div>
+              </v-card-text>
+              <v-card-text>
+                <div>
                   <div><b>SOMA Global</b>, Tampa, FL - <i>Senior Frontend Engineer</i></div>
                   <div class="grey--text">Feb 2019 - Nov 2019</div>
                   <blockquote>Dispatch software for first responders. Definitely an exciting project to be a part
@@ -94,9 +108,9 @@
               </v-card-text>
               <v-card-text>
                 <div>
-                  <blockquote>JavaScript, ES6, Vue.js, vuex, react.js, redux, node.js, 
+                  <blockquote>JavaScript, ES6, Vue.js, vuex, react.js, hooks, redux, node.js, 
                     REST API’s, websockets, charting, TradingView, 
-                    HTML5, CSS/SASS/LESS, Bootstrap, Vuetify, Material Design, GoLang, Angular 1</blockquote>
+                    HTML5, CSS/SASS/LESS, Bootstrap, Vuetify, Material Design, Ant Design, GoLang, Angular 1</blockquote>
                 </div>
               </v-card-text>
               <v-card-text>
@@ -117,7 +131,7 @@
               <v-card-text>
                 <div>
                   <blockquote>Native English,</blockquote>
-                  <blockquote>Conversational & Professional Italian</blockquote>
+                  <blockquote>Conversational & Professional Italian, Livello B2</blockquote>
                 </div>
               </v-card-text>
             </v-flex>

@@ -101,6 +101,20 @@
                     </v-card-text>
                   </v-card>
                 </v-flex>
+                <v-flex xs12 md4>
+                  <v-card flat class="elevation-0 transparent">
+                    <v-card-text class="text-xs-center">
+                      <v-icon x-large class="blue--text text--lighten-2">fas fa-chart-line</v-icon>
+                    </v-card-text>
+                    <v-card-title primary-title class="layout justify-center">
+                      <div class="headline text-xs-center">Real-time Data</div>
+                    </v-card-title>
+                    <v-card-text>
+                      After moving back to Italy I started at <a href="https://www.radicalbit.io/">Radicalbit</a> working with live streaming data and dashboards. 
+                      Streaming data and real-time analytics introduced interesting front-end challenges querying data and displaying charts.
+                    </v-card-text>
+                  </v-card>
+                </v-flex>
               </v-layout>
             </v-container>
           </v-flex>
