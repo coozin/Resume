@@ -9,7 +9,7 @@
             justify-center
             class="white--text"
           >
-            <h1 class="white--text mb-2 display-1 text-xs-center">Hire Josh</h1>
+            <h1 class="white--text mb-2 display-1 text-xs-center">Hire Josh Shouppe</h1>
             <div class="subheading mb-3 text-xs-center">Web Developer</div>
             <v-btn
               class="blue lighten-2 mt-5"
@@ -17,7 +17,7 @@
               large
               to="/resume"
             >
-              View full resume
+              View full résumé
             </v-btn>
           </v-layout>
         </v-parallax>
@@ -145,20 +145,37 @@
             <v-flex xs12 sm4>
               <v-card flat class="elevation-0 transparent">
                 <v-card-title primary-title class="layout justify-center">
-                  <div class="headline">Recent project</div>
+                  <div class="headline">Recent projects</div>
                 </v-card-title>
                 <v-card-actions
                   class="justify-center"
                 >
                   <v-btn
-                    class="blue lighten-2 mt-5"
+                    class="blue lighten-2 mt-2"
                     dark
                     large
                     to="/music"
                   >
                     Free Music
                   </v-btn>
+                  <br />
+                  
                 </v-card-actions>
+                <v-card-actions
+                  class="justify-center"
+                >
+                  <v-btn
+                    class="blue lighten-2 mt-2"
+                    dark
+                    large
+                    href="https://github.com/coozin/pixel-art-app"
+                    target="_blank"
+                  >
+                    Pixel Art App
+                  </v-btn>
+                  
+                </v-card-actions>
+                
               </v-card>
             </v-flex>
 
@@ -168,7 +185,7 @@
                   <div class="headline">Authorization</div>
                 </v-card-title>
                 <v-card-text>
-                  I'm authorized to work in the USA.
+                  I'm authorized to live and work in both the USA and EU. I do not require a visa.
                 </v-card-text>
               </v-card>
             </v-flex>
