@@ -52,7 +52,7 @@
                     <v-card-text>
                       Two years experience in consulting with Accenture Italia! Worked on many namebrand projects 
                       such as KitKat, Jeep, Fiat, Unicredit and even a ticketing terminal used by thousands everyday: 
-                      <a href="https://www.italotreno.it/en/the-train/italo-ticket-office">ItaloTreno</a>. (JavaScript, jQuery, TypeScript, REST APIs, Git)
+                      <a target="_blank" rel="nofollow" href="https://www.italotreno.it/en/the-train/italo-ticket-office">ItaloTreno</a>. (JavaScript, jQuery, TypeScript, REST APIs, Git)
                     </v-card-text>
                   </v-card>
                 </v-flex>
@@ -65,7 +65,7 @@
                       <div class="headline">SaaS</div>
                     </v-card-title>
                     <v-card-text>
-                      I spent my last year in Italy working on <a href="https://www.crystal.ai">crystal</a> by iGenius. She's 
+                      I spent my last year in Italy working on <a target="_blank" rel="nofollow" href="https://www.crystal.ai">crystal</a> by iGenius. She's 
                       a virtual advisor that helps manage a client's brand. Track invoices, KPIs, and all your social 
                       media in one place. (React.js, Redux, Gitlab Automation, AmCharts, Node.js) 
                     </v-card-text>
@@ -81,7 +81,7 @@
                     </v-card-title>
                     <v-card-text>
                       After moving back to the US, I worked remotely for Halo Platform building 
-                      cryptocurrency exchanges. Their <a href="https://www.halodex.io/">decentralized exchange</a> uses modular Vue.js ui components and is styled by 
+                      cryptocurrency exchanges. Their <a target="_blank" rel="nofollow" href="https://www.halodex.io/">decentralized exchange</a> uses modular Vue.js ui components and is styled by 
                       vuetify (like this site). (Vue.js, Vuex, Apollo GraphQL, WebSockets)
                     </v-card-text>
                   </v-card>
@@ -95,7 +95,7 @@
                       <div class="headline text-xs-center">Public Service</div>
                     </v-card-title>
                     <v-card-text>
-                      After the crypto bubble went bust. I started working locally in Tampa at <a href="https://www.somaglobal.com/">SOMA Global</a> in the public
+                      After the crypto bubble went bust. I started working locally in Tampa at <a target="_blank" rel="nofollow" href="https://www.somaglobal.com/">SOMA Global</a> in the public
                       safety arena. I got back to my roots to once again work with react & redux but with some new skills sprinkled in.
                       (React, Redux, GoLang, Angular)
                     </v-card-text>
@@ -110,7 +110,7 @@
                       <div class="headline text-xs-center">Real-time Data</div>
                     </v-card-title>
                     <v-card-text>
-                      After moving back to Italy I started at <a href="https://www.radicalbit.io/">Radicalbit</a> working with live streaming data and dashboards. 
+                      After moving back to Italy I started at <a target="_blank" rel="nofollow" href="https://www.radicalbit.io/">Radicalbit</a> working with live streaming data and dashboards. 
                       Streaming data and real-time analytics introduced interesting front-end challenges querying data and displaying charts.
                     </v-card-text>
                   </v-card>
@@ -197,7 +197,7 @@
                       <v-icon class="blue--text text--lighten-2">fab fa-linkedin</v-icon>
                     </v-list-tile-action>
                     <v-list-tile-content>
-                      <v-list-tile-title><a href="https://www.linkedin.com/in/joshshouppe/">/in/joshshouppe/</a></v-list-tile-title>
+                      <v-list-tile-title><a target="_blank" href="https://www.linkedin.com/in/joshshouppe/">/in/joshshouppe/</a></v-list-tile-title>
                     </v-list-tile-content>
                   </v-list-tile>
 
@@ -206,7 +206,7 @@
                       <v-icon class="blue--text text--lighten-2">fab fa-github</v-icon>
                     </v-list-tile-action>
                     <v-list-tile-content>
-                      <v-list-tile-title><a href="https://github.com/coozin">/coozin</a></v-list-tile-title>
+                      <v-list-tile-title><a target="_blank" href="https://github.com/coozin">/coozin</a></v-list-tile-title>
                     </v-list-tile-content>
                   </v-list-tile>
                 </v-list>
@@ -230,18 +230,5 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-/* h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-} */
+
 </style>

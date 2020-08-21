@@ -14,7 +14,7 @@
       </v-layout>
       <v-layout justify-center>
         <div class="subheader grey--text mb-5">with 
-          <a href="https://www.openwhyd.org">openwhyd's</a> api
+          <a target="_blank" rel="nofollow" href="https://www.openwhyd.org">openwhyd's</a> api
         </div>
       </v-layout>
       <SearchMusic />
