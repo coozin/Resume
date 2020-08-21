@@ -30,5 +30,7 @@ npm run lint
 npm run test:unit
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Make it live
+```
+git push origin `git subtree split --prefix dist master`:gh-pages --force
+```
