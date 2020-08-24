@@ -2,7 +2,7 @@
   <v-app light>
     <v-content>
       <section>
-        <v-parallax :src="require('@/assets/wallhaven.jpg')" height="600">
+        <v-parallax :src="wallpaper" height="600">
           <v-layout
             column
             align-center
@@ -237,10 +237,17 @@
 </template>
 
 <script>
+import getWallpaper from '../utils/getWallpaper';
+import dynamicImage from '../constants/imageMatch'
+
+const myWallpaper = dynamicImage[getWallpaper()]
+
 export default {
   name: 'MainPage',
-  props: {
-    msg: String
+  data: function () {
+    return {
+      wallpaper: require(`@/assets/dynamicWallpapers/${myWallpaper}`)
+    }
   }
 }
 </script>
