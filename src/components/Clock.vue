@@ -10,7 +10,7 @@ export default {
   name: 'clock',
   data() {
     return {
-      time: moment().format('MMMM Do YYYY, h:mm:ss a')
+      time: moment().format('LLL')
     }
   },
   mounted () {
@@ -18,7 +18,7 @@ export default {
   },
   methods: {
     setTime: function () {
-      const currentTime = moment().format('MMMM Do YYYY, h:mm:ss a');
+      const currentTime = moment().format('LLL');
       this.time = currentTime;
     }
   }

@@ -2,6 +2,10 @@
   <v-app light>
     <v-content>
       <section>
+        <Clock
+          :style="{position: 'absolute', top: '25px', right: '25px'}"
+          class="white--text"
+        />
         <v-img :src="wallpaper" :aspect-ratio="16/9">
           <v-container fill-height>
             <v-row
@@ -9,7 +13,6 @@
               justify="center"
               :style="{width: '100%'}"
             >
-              <Clock />
               <v-col
                 sm="4"
                 class="white--text"
@@ -148,7 +151,6 @@
       <section>
         <v-container grid-list-xl>
           <v-layout row wrap justify-center class="my-5">
-
             <v-flex xs12 sm4>
               <v-card flat class="elevation-0 transparent">
                 <v-card-title primary-title class="layout justify-center">
