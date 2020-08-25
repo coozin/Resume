@@ -3,7 +3,12 @@
     <v-content>
       <section>
         <Clock
-          :style="{position: 'absolute', top: '25px', right: '25px'}"
+          :style="{
+            position: 'absolute',
+            top: '25px',
+            right: '25px',
+            zIndex: '1'
+          }"
           class="white--text"
         />
         <v-img :src="wallpaper" :aspect-ratio="16/9">

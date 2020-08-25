@@ -32,5 +32,7 @@ npm run test:unit
 
 ### Make it live
 ```
+git add dist && git commit -m "Initial dist subtree commit"
+
 git push origin `git subtree split --prefix dist master`:gh-pages --force
 ```
