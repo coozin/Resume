@@ -11,7 +11,7 @@
           }"
           class="white--text"
         />
-        <v-img :src="wallpaper" :aspect-ratio="16/9">
+        <v-img :src="`${require(`@/assets/dynamicWallpapers/${wallpaper}`)}`" :aspect-ratio="16/9">
           <v-container fill-height>
             <v-row
               align="center"
@@ -255,13 +255,21 @@ import Clock from '@/components/Clock.vue'
 import getWallpaper from '../utils/getWallpaper';
 import dynamicImage from '../constants/imageMatch'
 
-const myWallpaper = dynamicImage[getWallpaper()]
-
 export default {
   name: 'MainPage',
   data: function () {
     return {
-      wallpaper: require(`@/assets/dynamicWallpapers/${myWallpaper}`)
+      wallpaper: dynamicImage[getWallpaper()]
+    }
+  },
+  mounted () {
+    this.setWallpaperInterval()
+  },
+  methods: {
+    setWallpaperInterval: function() {
+      setInterval(() => {
+        this.wallpaper = dynamicImage[getWallpaper()]
+      }, 60000)
     }
   },
   components: {

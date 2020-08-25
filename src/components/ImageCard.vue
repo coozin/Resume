@@ -24,8 +24,5 @@ export default {
   props: {
     image: Object,
   },
-  created () {
-    // console.log(this.image)
-  }
 }
 </script>
