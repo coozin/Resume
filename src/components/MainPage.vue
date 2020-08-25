@@ -2,25 +2,31 @@
   <v-app light>
     <v-content>
       <section>
-        <v-parallax :src="wallpaper" height="600">
-          <v-layout
-            column
-            align-center
-            justify-center
-            class="white--text"
-          >
-            <h1 class="white--text mb-2 display-1 text-xs-center">Hire Josh Shouppe</h1>
-            <div class="subheading mb-3 text-xs-center">Web Developer</div>
-            <v-btn
-              class="blue lighten-2 mt-5"
-              dark
-              large
-              to="/resume"
+        <v-img :src="wallpaper" :aspect-ratio="16/9">
+          <v-container fill-height>
+            <v-row
+              align="center"
+              justify="center"
+              :style="{width: '100%'}"
             >
-              View full résumé
-            </v-btn>
-          </v-layout>
-        </v-parallax>
+              <v-col
+                sm="4"
+                class="white--text"
+              >
+                <h1 class="mb-2 display-1 text-xs-center">Hire Josh Shouppe</h1>
+                <div class="subheading mb-3 text-xs-center">Web Developer</div>
+                <v-btn
+                  class="blue lighten-2 mt-5"
+                  dark
+                  large
+                  to="/resume"
+                >
+                  View full résumé
+                </v-btn>
+              </v-col>
+            </v-row>
+          </v-container>
+        </v-img>
       </section>
 
       <section>
