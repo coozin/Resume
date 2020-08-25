@@ -9,6 +9,7 @@
               justify="center"
               :style="{width: '100%'}"
             >
+              <Clock />
               <v-col
                 sm="4"
                 class="white--text"
@@ -243,6 +244,7 @@
 </template>
 
 <script>
+import Clock from '@/components/Clock.vue'
 import getWallpaper from '../utils/getWallpaper';
 import dynamicImage from '../constants/imageMatch'
 
@@ -254,6 +256,9 @@ export default {
     return {
       wallpaper: require(`@/assets/dynamicWallpapers/${myWallpaper}`)
     }
+  },
+  components: {
+    Clock
   }
 }
 </script>
