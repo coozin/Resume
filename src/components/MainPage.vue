@@ -2,42 +2,49 @@
   <v-app light>
     <v-content>
       <section>
-        <Clock
-          :style="{
-            position: 'absolute',
-            top: '25px',
-            right: '25px',
-            zIndex: '1'
-          }"
-          class="white--text"
-        />
         <v-img :src="`${require(`@/assets/dynamicWallpapers/${wallpaper}`)}`" :aspect-ratio="16/9">
           <v-container fill-height>
-            <v-row
+            <v-col
+              :style="{width: '100%'}"
               align="center"
               justify="center"
-              :style="{width: '100%'}"
             >
-              <v-col
-                sm="4"
-                class="white--text"
+              <v-row
+                align="start"
+                justify="center"
+                :style="{width: '100%'}"
               >
-                <h1 class="mb-2 display-1 text-xs-center">Hire Josh Shouppe</h1>
-                <div class="subheading mb-3 text-xs-center">Web Developer</div>
-                <v-btn
-                  class="blue lighten-2 mt-5"
-                  dark
-                  large
-                  to="/resume"
+                <Clock
+                  :style="{}"
+                  class="white--text"
+                />
+              </v-row>
+              <v-row
+                align="center"
+                justify="center"
+                :style="{width: '100%'}"
+              >
+                <v-col
+                  sm="4"
+                  class="white--text"
                 >
-                  View full résumé
-                </v-btn>
-              </v-col>
-            </v-row>
+                  <h1 class="mb-2 display-1 text-xs-center">Hire Josh Shouppe</h1>
+                  <div class="subheading mb-3 text-xs-center">Web Developer</div>
+                  <v-btn
+                    class="blue lighten-2 mt-5"
+                    :style="{textAlign: 'center'}"
+                    dark
+                    large
+                    to="/resume"
+                  >
+                    View full résumé
+                  </v-btn>
+                </v-col>
+              </v-row>
+            </v-col>
           </v-container>
         </v-img>
       </section>
-
       <section>
         <v-layout
           column
