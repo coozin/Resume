@@ -3,35 +3,31 @@
     <v-content>
       <section>
         <v-img :src="`${require(`@/assets/dynamicWallpapers/${wallpaper}`)}`" :aspect-ratio="16/9">
+        <v-container
+          :style="{width: '100%'}"
+        >
+          <Clock
+            :style="{float: 'right'}"
+            class="white--text"
+          />
+        </v-container>
           <v-container fill-height>
-            <v-col
+            <v-row
               :style="{width: '100%'}"
-              align="center"
-              justify="center"
             >
-              <v-row
-                align="start"
-                justify="center"
-                :style="{width: '100%'}"
-              >
-                <Clock
-                  :style="{}"
-                  class="white--text"
-                />
-              </v-row>
-              <v-row
+              <v-col
+                sm="4"
+                class="white--text"
                 align="center"
                 justify="center"
-                :style="{width: '100%'}"
               >
-                <v-col
-                  sm="4"
-                  class="white--text"
+                <v-container
+                  :style="{width: '100%'}"
                 >
-                  <h1 class="mb-2 display-1 text-xs-center">Hire Josh Shouppe</h1>
+                  <h1 class="mb-2 display-1 text-xs-center">Josh Shouppe</h1>
                   <div class="subheading mb-3 text-xs-center">Web Developer</div>
                   <v-btn
-                    class="blue lighten-2 mt-5"
+                    class="blue lighten-2 mt-2"
                     :style="{textAlign: 'center'}"
                     dark
                     large
@@ -39,9 +35,9 @@
                   >
                     View full résumé
                   </v-btn>
-                </v-col>
-              </v-row>
-            </v-col>
+                </v-container>
+              </v-col>
+            </v-row>
           </v-container>
         </v-img>
       </section>
@@ -180,7 +176,6 @@
                     Free Music
                   </v-btn>
                   <br />
-                  
                 </v-card-actions>
                 <v-card-actions
                   class="justify-center"
@@ -194,9 +189,7 @@
                   >
                     Pixel Art App
                   </v-btn>
-                  
                 </v-card-actions>
-                
               </v-card>
             </v-flex>
 
